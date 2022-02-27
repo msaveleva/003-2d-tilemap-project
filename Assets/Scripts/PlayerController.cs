@@ -4,29 +4,33 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    public float speed;
+    private BoxCollider2D boxCollider;
+    private Vector3 moveDelta;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
-        // Debug.Log(Input.GetAxis("Horizontal"));
-        // Debug.Log(Input.GetAxis("Vertical"));
-        // Debug.Log("======");
-        moveInput *= Time.deltaTime;
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
 
-        if (!moveInput.Equals(Vector2.zero))
+        moveDelta = new Vector3(x, y, 0);
+        
+        // Swapping sprite's direction depending on input.
+        if (moveDelta.x > 0)
         {
-            transform.Translate(new Vector3(moveInput.x, moveInput.y, 0));    
+            transform.localScale = Vector3.one;
+        } else if (moveDelta.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         
-        // transform.position += new Vector3(moveVelocity.x, moveVelocity.y, 0);
+        // Movement implementation
+        transform.Translate(moveDelta * Time.deltaTime);
     }
 }
