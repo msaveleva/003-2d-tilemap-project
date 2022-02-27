@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
         
-        // Movement implementation
+        // Movement implementation.
         transform.Translate(moveDelta * Time.deltaTime);
     }
 }
