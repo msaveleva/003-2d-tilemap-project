@@ -47,6 +47,9 @@ TagManager:
   - name: Walls
     uniqueID: 378713017
     locked: 0
+  - name: Doors
+    uniqueID: 3592392681
+    locked: 0
   - name: Player
     uniqueID: 1617101703
     locked: 0

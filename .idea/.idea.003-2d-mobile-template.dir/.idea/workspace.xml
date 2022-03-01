@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="785d004d-0276-4086-a041-64ffc77071b2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.003-2d-mobile-template.dir/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.003-2d-mobile-template.dir/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.003-2d-mobile-template.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.003-2d-mobile-template.dir/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
@@ -47,6 +43,7 @@
       <updated>1645964456122</updated>
       <workItem from="1645964456123" duration="90000" />
       <workItem from="1645964565482" duration="4000" />
+      <workItem from="1646071249530" duration="4000" />
     </task>
     <servers />
   </component>
