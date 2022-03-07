@@ -47,6 +47,10 @@ public class PlayerController : MonoBehaviour
             // Movement implementation.
             transform.Translate(0, moveDelta.y * Time.deltaTime, 0);    
         }
+        else 
+        {
+            Debug.Log(hit.collider);
+        }
 
         hit = Physics2D.BoxCast(
             transform.position,
@@ -60,6 +64,10 @@ public class PlayerController : MonoBehaviour
         {
             // Movement implementation.
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
+        }
+        else 
+        {
+            Debug.Log(hit.collider);
         }
     }
 }
