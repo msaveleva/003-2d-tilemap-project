@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class DoorOpens : MonoBehaviour
 {
+    // Animator component's property.
+    private Animator animator;
+    
+    private bool doorIsOpen = false;
+    
+    // Hash property suggested by Rider instead of plain using "shouldOpen" key in OnCollisionEnter2D method.
+    private static readonly int ShouldOpen = Animator.StringToHash("shouldOpen");
+    
     // Start is called before the first frame update
     void Start()
-    {
-        
+    { 
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,5 +34,13 @@ public class DoorOpens : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         Debug.Log("Entered trigger!");
+        
+        if (!doorIsOpen)
+        {
+            Debug.Log("Opening the door.");
+            animator.SetBool("shouldOpen", true);    
+        }
+        
+        Debug.Log("Completing collision handling.");
     }
 }
