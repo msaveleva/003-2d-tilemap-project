@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorOpens : MonoBehaviour
 {
@@ -38,7 +37,13 @@ public class DoorOpens : MonoBehaviour
         if (!doorIsOpen)
         {
             Debug.Log("Opening the door.");
-            animator.SetBool("shouldOpen", true);    
+            animator.SetBool("shouldOpen", true);
+            
+            // Loading the next scene after the door has been opened.
+            // Ending the game.
+            SceneManager.LoadScene("GameOver");
+
+            doorIsOpen = true;
         }
         
         Debug.Log("Completing collision handling.");

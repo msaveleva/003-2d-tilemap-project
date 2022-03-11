@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorController : MonoBehaviour
 {
@@ -21,7 +22,16 @@ public class DoorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Update");
         
+        if (doorIsOpen)
+        {
+            Debug.Log("Showing game over scene...");
+            // Loading the next scene after the door has been opened.
+            // Ending the game.
+            SceneManager.LoadScene("GameOver");
+            Debug.Log("Shown");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -31,7 +41,8 @@ public class DoorController : MonoBehaviour
         if (!doorIsOpen)
         {
             Debug.Log("Opening the door.");
-            animator.SetBool("shouldOpen", true);    
+            animator.SetBool("shouldOpen", true);
+            doorIsOpen = true;
         }
         
         Debug.Log("Completing collision handling.");
