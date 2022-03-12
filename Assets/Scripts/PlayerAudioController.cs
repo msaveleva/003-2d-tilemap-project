@@ -7,10 +7,13 @@ public class PlayerAudioController : MonoBehaviour
     private AudioSource audioSource;
     private bool isWalking = false;
 
+    private bool startPlayingSound = false;
+
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.loop = true;
     }
 
     // Update is called once per frame
@@ -22,10 +25,15 @@ public class PlayerAudioController : MonoBehaviour
 
         if (isWalking)
         {
-            audioSource.Play();
+            if (!startPlayingSound)
+            {
+                audioSource.Play();
+                startPlayingSound = true;
+            }
         }
         else
         {
+            startPlayingSound = false;
             audioSource.Stop();
         }
     }
