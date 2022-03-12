@@ -29,13 +29,17 @@ public class DoorOpens : MonoBehaviour
             animator.SetBool("shouldOpen", true);
 
             // TODO: fix calling on the main thread.
-            Task.Delay(1000).ContinueWith(t => showGameOverOnMainThread());
+            // Task.Delay(1000).ContinueWith(t => showGameOverOnMainThread());
+            SceneManager.LoadScene("GameOver");
             
             doorIsOpen = true;
         }
         
         Debug.Log("Completing collision handling.");
     }
+    
+    
+    /// Below are the possible solutions of running the method on the main thread (doesn't work for now).
 
     /// <summary>
     /// Executing game over scene presentation on the main thread.
