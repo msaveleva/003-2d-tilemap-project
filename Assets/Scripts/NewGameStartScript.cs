@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NewGameStartScript : MonoBehaviour
 {
@@ -19,5 +20,7 @@ public class NewGameStartScript : MonoBehaviour
     public void StartNewGame()
     {
         Debug.Log("Start new game");
+
+        SceneManager.LoadScene("FirstRoom");
     }
 }
