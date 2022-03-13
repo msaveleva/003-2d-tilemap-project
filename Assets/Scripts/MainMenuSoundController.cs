@@ -10,6 +10,7 @@ public class MainMenuSoundController : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.loop = true;
         audioSource.Play();
     }
 
