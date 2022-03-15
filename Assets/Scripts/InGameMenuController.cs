@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class InGameMenuController : MonoBehaviour
 {
+    private PlayerController playerControllerScript;
+    private PlayerAudioController playerAudioControllerScript;
+    private PlayerAnimController playerAnimControllerScript;
+    
     private bool isInGameMenuShown = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerControllerScript = GetComponent<PlayerController>();
+        playerAudioControllerScript = GetComponent<PlayerAudioController>();
+        playerAnimControllerScript = GetComponent<PlayerAnimController>();
     }
 
     // Update is called once per frame
@@ -31,5 +37,16 @@ public class InGameMenuController : MonoBehaviour
         {
             Debug.Log("Hidden");
         }
+        
+        pauseGame(show);
+    }
+
+    private void pauseGame(bool pause)
+    {
+        Time.timeScale = pause ? 0 : 1;
+        
+        playerControllerScript.enabled = !pause;
+        playerAudioControllerScript.enabled = !pause;
+        playerAnimControllerScript.enabled = !pause;
     }
 }
