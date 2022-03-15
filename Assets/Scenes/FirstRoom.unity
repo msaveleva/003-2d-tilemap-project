@@ -418,6 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb90ab02ede96435f81fe1457f7f0199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1261638209}
 --- !u!1 &501266329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2708,7 +2709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1261638207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2756,7 +2757,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261638206}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -4544,6 +4545,10 @@ PrefabInstance:
     - target: {fileID: 6541276980300823433, guid: b73880429ca244a969c15eee1add2889, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541276980300823434, guid: b73880429ca244a969c15eee1add2889, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6541276980300823436, guid: b73880429ca244a969c15eee1add2889, type: 3}
       propertyPath: m_Name

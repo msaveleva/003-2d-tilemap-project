@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InGameMenuController : MonoBehaviour
 {
+    [SerializeField] public Canvas pauseMenu;
+    
     private PlayerController playerControllerScript;
     private PlayerAudioController playerAudioControllerScript;
     private PlayerAnimController playerAnimControllerScript;
@@ -37,7 +39,8 @@ public class InGameMenuController : MonoBehaviour
         {
             Debug.Log("Hidden");
         }
-        
+
+        pauseMenu.enabled = show;
         pauseGame(show);
     }
 
