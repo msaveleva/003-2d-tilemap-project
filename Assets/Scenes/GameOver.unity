@@ -276,7 +276,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Game
+  m_Text: Main Menu
 --- !u!222 &165719645
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 750361101}
   - component: {fileID: 750361100}
   m_Layer: 5
-  m_Name: New Game Button
+  m_Name: Main Menu Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -584,8 +584,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 922243779}
-        m_TargetAssemblyTypeName: NewGameStartScript, Assembly-CSharp
-        m_MethodName: StartNewGame
+        m_TargetAssemblyTypeName: ShowMainMenuScript, Assembly-CSharp
+        m_MethodName: ShowMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -775,10 +775,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 922243780}
-  - component: {fileID: 922243779}
   - component: {fileID: 922243778}
+  - component: {fileID: 922243779}
   m_Layer: 0
-  m_Name: MenuControllerEmpty
+  m_Name: GameOverMenuControllerEmpty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -805,7 +805,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 922243777}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8729d32d4ce4e4b2cb861ae592845764, type: 3}
+  m_Script: {fileID: 11500000, guid: 906858047815c455c9f6bab3ab8e975d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &922243780
